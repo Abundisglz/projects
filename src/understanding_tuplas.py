@@ -1,5 +1,5 @@
 """ las tuplas no cmabbian y tienen un espacio espesifico """
-dimensions=(200.50)
+dimensions=(200,50)
 print(dimensions)
 #como acceder a un elemento
 print(f"El largo es:{dimensions[0]}")

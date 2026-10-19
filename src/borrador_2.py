@@ -1,15 +1,11 @@
 #problema 1
-"""
 temp_c=float(input("Teclea la temperatura en grados celcius:"))
 temp_f = temp_c * 9 / 5 + 32
 temp_k = temp_c + 273.15
 if temp_k < 0.0:
     print (f"la temperatura es alta:{temp_c>=30}")
     print(f"temperatura en farenhein:{temp_f}")
-    print(f"temperatura en kelvin{temp_k}")
-
-"""
-""" 
+    print(f"temperatura en kelvin{temp_k}") 
 #problema 2
 pago = float(input("teclea cuanto se paga por hora:"))
 print("si trabajaste cuarenta horas y veinte minutos teclea 40.20 la hora seria el numero entero y los minutos como decimales")
@@ -25,9 +21,7 @@ else:
     print (f"Tu pago total es:{pago_horas_extras}")
     print (f"se hicieron horas extras:{horas_trab> 40}")
     print(f"las horas extras son:{horas_trab-40}")
-"""
-"""
-problema 3
+#problema 3
 cliente =str(input("Teclea yes si es estudiante o senior:").lower().strip())
 purchase_total =float(input("costo del producto:"))
 if cliente == "yes" and cliente == "no" and purchase_total <=0:
@@ -43,7 +37,6 @@ if cliente == "yes" and cliente == "no" and purchase_total <=0:
         print(f"Su compra es de:${purchase_total}")
 else:
     print("Error: Cliente no válido o compra no válida.")
-    """
 #problema 4
 num_1=int(input("Teclea un numero:"))
 num_2=int(input("Teclea otro numero:"))
@@ -58,3 +51,28 @@ print(f"El promedio es: {avarage}")
 print(f"El valor maximo es: {valor_max}")
 print(f"El valor minimo es: {valor_min}")
 print(f"¿Los tres números son pares? {par}")
+# problema 5
+ingreso_mensual = float(input("Teclea tu ingreso mensual: "))
+deuda_mensual = float(input("Teclea tu deuda mensual: "))
+puntaje_crediticio = int(input("Teclea tu puntaje crediticio: "))
+if ingreso_mensual <= 0 or deuda_mensual < 0 or puntaje_crediticio < 0:
+    print("Error: invalid input")
+else:
+    ratio_deuda = deuda_mensual / ingreso_mensual
+    elegible = ingreso_mensual >= 8000.0 and ratio_deuda <= 0.4 and puntaje_crediticio >= 650
+    print("Debt ratio:", ratio_deuda)
+    print("Eligible:", elegible)
+#problema 6
+peso_kilogramos=float(input("Teclea tu peso en kilogramos: "))
+estatura_metros=float(input("Teclea tu estatura en metros: "))
+bmi = peso_kilogramos/(estatura_metros**2)
+if peso_kilogramos <= 0 or estatura_metros <= 0:
+    print("Error: invalid input")
+else:
+    tiene_bajo_peso = bmi < 18.5
+    tiene_peso_normal = 18.5 <= bmi < 25.0
+    tiene_sobrepeso = bmi >= 25.0
+    print(f"Tu BMI es: {round(bmi,2)}")
+    print(f"¿Tienes bajo peso? {tiene_bajo_peso}")
+    print(f"¿Tienes peso normal? {tiene_peso_normal}")
+    print(f"¿Tienes sobrepeso? {tiene_sobrepeso}")
