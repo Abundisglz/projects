@@ -119,7 +119,6 @@ print(f"Longest word: {max(word,key=len)}")
 # Expected result: Shows that the password is weak.
 # Test case 3 - Error: A password with spaces.
 # Expected result: Shows an invalid password message.
-
 password = str(input("Enter your password: "))
 uppercase = False
 lowercase = False
@@ -140,12 +139,10 @@ else:
             character_special = True
     if 8 > counter_letter_password or password == password.lower():
         print("Your password is weak")
-    elif 8<=counter_letter_password and uppercase and lowercase and number:
+    elif 8<=counter_letter_password and uppercase and lowercase and number and not character_special:
         print("Your password is medium")
     elif 8<=counter_letter_password and uppercase and lowercase and number and character_special:
         print("Your password is strong")
-
-
 # Problem 6: Product label formatter (fixed-width text)
 # Description: This program puts a product name and price together.
 # Inputs: The product name and its price.
